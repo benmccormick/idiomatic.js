@@ -1,6 +1,6 @@
 # Windsor Circle JavaScript Style Guide
 
-## This document is based on [Idiomatic.js](https://github.com/rwaldron/idiomatic.js).  You can find the original source on Github, including a list of contributors and many additional resources.
+### This document is based on [Idiomatic.js](https://github.com/rwaldron/idiomatic.js).  You can find the original source on Github, including a list of contributors and many additional resources.
 
 ## Principles
 
