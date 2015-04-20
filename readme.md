@@ -26,6 +26,7 @@
  * [Backbone & Other Libraries](#backbone)
  * [ES6](#es6)
  * [ES5](#es5)
+ * [Miscellaneous Style](#misc)
 
 
 ------------------------------------------------
