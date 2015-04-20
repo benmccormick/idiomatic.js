@@ -636,7 +636,7 @@
     A. Base Classes
 
     - Always use Marionette Base Classes For Views
-    - Don't Use multiple levels of inheritance.  Views should inherit from Marionette Classes (Views, Behaviors, Applications), or Backbone Classes (Models, Collections, Routers).  Shared code should use behaviors (Views) or a mixin library (Models/Collections)
+    - Don't Use multiple levels of inheritance.  Views should inherit from Marionette Classes (Views, Behaviors, Applications), or Backbone Classes (Models, Collections, Routers).  Shared code should use behaviors (Views), composition (multiple small Views/Web Components) or a mixin library (Models/Collections)
     
     B. jQuery and View Scope
 
@@ -664,13 +664,18 @@
     - For every `Marionette.Application` there should be a single rootView, attached to the applciation as the rootView property
     - That View should never be rendered, but instead declare regions on existing DOM elements and show childViews on initialization
     - Below that root level, every View should be rendered using showChildView (ideally in the onBeforeShow callback of a parents view), or as part of a collectionView
+    
+    F. Property Ordering
+    
+    - For Backbone Views and Behaviors properties and methods should go in the following order: declarative properties (template, className, events, etc), template related functions (serializeData, templateHelpers), lifecycle methods in order of occurrence (initialize, onBeforeRender/Attach/Show, onRender/Attach/Show, onBeforeDestroy, onDestroy), any helper methods
+    - For Models, Applications, Routers, etc follow a similar convention of putting declarative datas and rules on top, Library method overrides next, and custom helper functions at the bottom
 
-    F. Services
+    G. Services
 
     - For common resources or utilities, consider defining a Service object that can be interacted with via radio requests
     - Services should be single purpose and focused on abstracting common system operations (logging, data retrieval, displaying toaster messages)
 
-    G. Misc Library rules
+    H. Misc Library rules
 
     - When possible, use LoDash for common operations rather than rolling your own helpers
     - For working with dates always use Moment rather than built in JavaScript dates
@@ -709,6 +714,22 @@
     - All new code should be written in the ES6 style
     - If you're making significant changes to an ES5 style, consider taking the time to convert it to an ES6 file.  Note that this will require adding tests and passing automated style checking
 
+11. <a name="misc">Miscellaneous Style</a>
+
+    A. Length preferences
+    
+    - Prefer short lines, short functions, short modules and short files
+    - Keep lines under 100 characters as a hard limit, prefer shorter as possible
+    - Avoid deep nested indentation by moving inner behavior into helper functions
+    - We don't currently enforce a hard limit on files, but once a file is larger than 200 lines, its probably time to start considering opportunities to split it or refactor
+    - Similarly we don't enforce a hard limit on functions but if a function does not easily fit within your editor screen, consider splitting it
+    
+    B. Code Flow
+    
+    - When code captures a complex workflow (a function that performs more than one step), consider breaking it up into multiple functions
+    - When breaking a workflow into multiple functions, the top level control function should sit at the top of the module (or higher than its related functions), and the related functions should fall beneath that
+    - When using this style it's very important to give functions meaningful names that describe their function.  If this is hard it's possibly a sign that the functions can be split up further.
+    
 ----------
 
 
