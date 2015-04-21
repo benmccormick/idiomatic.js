@@ -11,7 +11,7 @@
 
 ## Practices
 
-- Code Style should be enforced through tools.  We use jsHint to test for correctness and JSCS to test for style.  You should use an editor plugin to see tool feedback as you type, and all code reviewed code should pass style checking without warnings before being approved.  We use EditorConfig to enforce consistent whitespace.
+- Code Style should be enforced through tools.  We use jsHint to test our ES5 code and ESLint to test our ES6 code.  You should use an editor plugin to see tool feedback as you type, and all code reviewed code should pass style checking without warnings before being approved.  We use EditorConfig to enforce consistent whitespace.
 - Part of writing good code is testing. All new code written should include unit tests that meaningfully test the codes behavior.  Note that the goal of Unit Testing is to ensure certain behaviors, and testing should be strucuture agnostic as much as is feasible.
 
 
