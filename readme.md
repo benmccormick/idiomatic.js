@@ -67,15 +67,15 @@
     // Always use brackets for block statements and include a space 
     // after the condition before the first bracket
 
-    if(condition) {
+    if (condition) {
       // statements
     }
 
-    while(condition) {
+    while (condition) {
       // statements
     }
 
-    for(var i = 0; i < 100; i++) {
+    for (var i = 0; i < 100; i++) {
       // statements
     }
 
