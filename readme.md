@@ -145,7 +145,7 @@
     function foo() {
       let foo,
         bar;
-      if(condition) {
+      if (condition) {
         bar = "";
         // statements
       }
@@ -202,7 +202,7 @@
     // This preferred form has the added value of being
     // able to call itself and have an identity in stack traces:
     var factorial = function factorial(number) {
-      if(number < 2) {
+      if (number < 2) {
         return 1;
       }
 
@@ -437,7 +437,7 @@
       return document.querySelectorAll(s);
     }
     var i,a=[],els=q("#foo");
-    for(i=0;i<els.length;i++){a.push(els[i]);}
+    for (i=0;i<els.length;i++){a.push(els[i]);}
     ```
 
     Don't do that :)
@@ -601,7 +601,7 @@
 
       // |this| now refers to `obj`
 
-      console.log( this[ key ] );
+      console.log(this[key]);
 
     }, obj ); // <-- the last arg is `thisArg`
 
